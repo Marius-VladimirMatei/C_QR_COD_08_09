@@ -13,8 +13,8 @@ typedef struct {
 
 /*Functions prototypes |
 int* itemCount => the pointer that indicates to the item number/order in the array */
-void addItem_s(Article inventory[], int* itemCount);
-void showArticles_s(Article inventory[], int itemCount);
+void addItem(Article inventory[], int* itemCount);
+void showArticles(Article inventory[], int itemCount);
 
 int main() {
     Article inventory[max_items];
@@ -34,10 +34,10 @@ int main() {
 
         switch (choice) {
         case 1:
-            addItem_s(inventory, &itemCount);
+            addItem(inventory, &itemCount);
             break;
         case 2:
-            showArticles_s(inventory, itemCount);
+            showArticles(inventory, itemCount);
             break;
         case 3:
             printf_s("Exiting...\n");
@@ -50,7 +50,7 @@ int main() {
 }
 
 // Function to add an item to the inventory
-void addItem_s(Article inventory[], int* itemCount) {
+void addItem(Article inventory[], int* itemCount) {
     // Check if the inventory is full
     if (*itemCount >= max_items) {
         printf_s("Your list is full.\n");
@@ -84,7 +84,7 @@ void addItem_s(Article inventory[], int* itemCount) {
 
 
 // Function to show all articles in the inventory
-void showArticles_s(Article inventory[], int itemCount) {
+void showArticles(Article inventory[], int itemCount) {
     if (itemCount == 0) {
         printf_s("Your inventory is empty.\n");
         return;
