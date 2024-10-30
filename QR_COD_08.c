@@ -2,7 +2,7 @@
 #include <string.h>
 
 
-// macros to define the array size
+// constants to define the array size
 #define max_items 2
 #define max_name_length 50
 
